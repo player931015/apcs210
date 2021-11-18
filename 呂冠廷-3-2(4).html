@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ex-3-2</title>
+    <meta charset="utf-8">
+    <style>
+        div {
+            text-align: center;
+        }
+
+        img.pokemon {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="display-1"></div>
+    <hr>
+    <div id="display-2"></div>
+    <hr>
+    <div id="display-3"></div>
+    <hr>
+
+    <script>
+        let pokemon1 = "pikachu.png";
+        let pokemon2 = "bulbasaur.png";
+        let pokemon3 = "charmander.png";
+        let pokemon4 = "squirtle.png";
+        
+        let content1 = ""
+        for (i=0 ; i<4 ; i++){
+            content1 += "<img class='pokemon' src ='" + pokemon1 +"' />" 
+        }
+            if(i%4==0)
+            {
+                content1 += "<br>"
+            }
+
+        let content2 = ""
+        for (i=0 ; i<4 ; i++)
+        {
+            content2 +="<img class='pokemon' src ='" + pokemon2 + "' />"
+        }
+        if(i%4==0)
+        {
+                content2 += "<br>"
+        }
+
+        let content3 = ""
+        for (i=0 ; i<4 ; i++)
+        {
+            content3 +="<img class='pokemon' src ='" + pokemon3 + "' />"
+        }
+            if(i%4==0)
+            {
+                content3 += "<br>"
+            }
+       
+        let content4 = ""
+        for (i=0 ; i<4 ; i++)
+        {
+            content4 +="<img class='pokemon' src ='" + pokemon4 + "' />"
+        }
+        if(i%4==0)
+        {
+                content4 += "<br>"
+        }
+        let content5 = ""
+        for (i=0 ; i<16 ; i++)
+        {
+            let x = 1 + Math.random() * 4; 
+			let y = Math.floor(x);
+            if(y==1)
+            {
+                content5 +="<img class='pokemon' src ='" + pokemon1 + "' />"
+            }
+            if(y==2)
+            {
+                content5 +="<img class='pokemon' src ='" + pokemon2 + "' />"
+            }
+            if(y==3)
+            {
+                content5 +="<img class='pokemon' src ='" + pokemon3 + "' />"
+            }
+            if(y==4)
+            {
+                content5 +="<img class='pokemon' src ='" + pokemon4 + "' />"
+            }
+            if(i%4==3)
+            {
+                content5 += "<br>"
+            }
+        }
+        console.log(content1);
+        document.getElementById("display-1").innerHTML = content1 ;
+        console.log(content2);
+        document.getElementById("display-2").innerHTML = content1+content2+content3+content4 ;
+        console.log(content5);
+        document.getElementById("display-3").innerHTML = content5 ;
+        
+
+    </script>
+</body>
+
+</html>
